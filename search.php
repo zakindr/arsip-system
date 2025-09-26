@@ -108,11 +108,7 @@ include 'templates/sidebar.php';
                                         <td><?= htmlspecialchars(substr($row['URAIAN'] ?? '', 0, 100)) ?>...</td>
                                         <td><?= htmlspecialchars($row['TAHUN'] ?? '') ?></td>
                                         <td>
-                                            <?php if (strpos($row['FILE'], '<a') !== false): ?>
-                                                <?= $row['FILE'] ?>
-                                            <?php else: ?>
-                                                <?= htmlspecialchars($row['FILE'] ?? '') ?>
-                                            <?php endif; ?>
+                                            <?= htmlspecialchars($row['FILE'] ?? '') ?>
                                         </td>
                                         <?php if ($auth->isAdmin()): ?>
                                         <td>
